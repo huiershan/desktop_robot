@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1330" height="1220" viewBox="0 0 1330 1220">
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","Segoe UI",sans-serif}</style>
+<rect width="1330" height="1220" fill="#f5f8fc"/>
+<text x="40" y="48" font-size="26" fill="#17324d" font-weight="700" text-anchor="start">系统原理图连接规划与安全停止路径</text>
+<text x="40" y="77" font-size="14" fill="#52687b" font-weight="400" text-anchor="start">concept-0.2 · 逻辑网络名有效，模块排针物理脚号与器件外围尚未补齐</text>
+<rect x="40" y="96" width="1250" height="36" rx="6" fill="#fff0d9" stroke="#e4c394" stroke-width="1.5"/>
+<text x="55" y="120" font-size="15" fill="#b86c16" font-weight="600" text-anchor="start">概念规划 / NOT FOR FABRICATION — 封装、孔位与电源资格尚未闭环</text>
+<rect x="50" y="165" width="200" height="95" rx="4" fill="white" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="64" y="192" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">J1 受保护 5V 输入</text>
+<text x="64" y="216" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">极性 / 输出电流待确认</text>
+<rect x="300" y="165" width="245" height="95" rx="4" fill="#fff0cd" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="314" y="192" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">F1 → SW1 → 输入保护</text>
+<text x="314" y="216" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">额定值、压降与温升待核</text>
+<rect x="600" y="165" width="250" height="95" rx="4" fill="#fff0cd" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="614" y="192" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">5V_PROT 分配点</text>
+<text x="614" y="216" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">VM / 主控 / 语音三支路</text>
+<polyline points="250,210 300,210" fill="none" stroke="#c6423c" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="545,210 600,210" fill="none" stroke="#c6423c" stroke-width="3" stroke-linejoin="round"/>
+<rect x="930" y="165" width="340" height="95" rx="4" fill="#fce0db" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="944" y="192" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">VM 滤波 / 回灌 / 储能</text>
+<text x="944" y="216" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">5V_VM → TB6612 VM，钳位待设计</text>
+<polyline points="850,210 930,210" fill="none" stroke="#c6423c" stroke-width="3" stroke-linejoin="round"/>
+<rect x="50" y="340" width="330" height="200" rx="4" fill="#dbeafe" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="64" y="367" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">U1 NodeMCU 成品开发板</text>
+<text x="64" y="391" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">VIN 经 JP_USB_SAFE 接 5V</text>
+<text x="64" y="413" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">3V3_LOGIC 取板载稳压：余量待验证</text>
+<text x="64" y="435" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">GPIO4/5：I²C SDA / SCL</text>
+<text x="64" y="457" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">GPIO1/3：保留 USB 下载与日志</text>
+<text x="64" y="479" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">GPIO0：保留 FLASH / 启动</text>
+<polyline points="725,260 725,300 215,300 215,340" fill="none" stroke="#c6423c" stroke-width="3" stroke-linejoin="round"/>
+<text x="260" y="290" font-size="12" fill="#c6423c" font-weight="400" text-anchor="start">JP_USB_SAFE：USB 供电隔离待验证</text>
+<rect x="490" y="340" width="350" height="200" rx="4" fill="#d7f0e5" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="504" y="367" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">U2 SC16IS750（拟新增）</text>
+<text x="504" y="391" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">3.3V / I²C 七位地址0x48</text>
+<text x="504" y="413" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">GPIO0..3 → AIN1/2、BIN1/2</text>
+<text x="504" y="435" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">UART → 电平适配 → ASR02</text>
+<text x="504" y="457" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">GPIO4 → 开漏级 → ToF XSHUT</text>
+<text x="504" y="479" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">GPIO5/6 → 数字红外适配后输入</text>
+<polyline points="380,400 490,400" fill="none" stroke="#236bb2" stroke-width="3" stroke-linejoin="round"/>
+<text x="393" y="386" font-size="12" fill="#236bb2" font-weight="400" text-anchor="start">SDA / SCL</text>
+<polyline points="50,445 28,445 28,705 100,705" fill="none" stroke="#236bb2" stroke-width="3" stroke-linejoin="round"/>
+<rect x="930" y="340" width="340" height="200" rx="4" fill="#fce0db" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="944" y="367" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">U4 TB6612 成品模块</text>
+<text x="944" y="391" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">VCC=3.3V / VM=5V 分开</text>
+<text x="944" y="413" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">PWMA=GPIO12 / PWMB=GPIO14</text>
+<text x="944" y="435" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">AIN1/2、BIN1/2 来自 U2</text>
+<text x="944" y="457" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">STBY 由 GPIO15 独立允许</text>
+<text x="944" y="479" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">AO1/2 → 左电机；BO1/2 → 右电机</text>
+<polyline points="1100,260 1100,340" fill="none" stroke="#c6423c" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="840,410 930,410" fill="none" stroke="#7c59a4" stroke-width="2" stroke-linejoin="round"/>
+<text x="850" y="397" font-size="12" fill="#7c59a4" font-weight="400" text-anchor="start">方向</text>
+<rect x="50" y="590" width="1220" height="88" rx="4" fill="#fff0d9" stroke="#e0b16d" stroke-width="1.5"/>
+<text x="68" y="618" font-size="16" fill="#b86c16" font-weight="600" text-anchor="start">直接安全路径：GPIO15 → R_ARM 1k → SW_MOTOR → STBY；驱动侧 R_STBY 10k 下拉</text>
+<text x="68" y="649" font-size="14" fill="#b86c16" font-weight="400" text-anchor="start">SW_MOTOR 断开或主控 GPIO15 为低时禁止运动。故障先清 STBY / PWM，再做日志和 I²C 恢复。</text>
+<polyline points="215,540 215,568 1100,568 1100,540" fill="none" stroke="#8054b3" stroke-width="3" stroke-linejoin="round"/>
+<text x="550" y="559" font-size="13" fill="#8054b3" font-weight="400" text-anchor="start">直接 PWM / STBY（不经过 I²C 桥）</text>
+<rect x="50" y="730" width="290" height="120" rx="4" fill="#eef4fb" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="64" y="757" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">J5 OLED</text>
+<text x="64" y="781" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">SSD1315 新款</text>
+<text x="64" y="803" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">GND / VDD / SCL / SDA</text>
+<rect x="360" y="730" width="290" height="120" rx="4" fill="#eef4fb" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="374" y="757" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">J6 GY-521 + J13 BH1750</text>
+<text x="374" y="781" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">共用3.3V侧 I²C</text>
+<text x="374" y="803" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">供电、上拉与地址待实测</text>
+<rect x="670" y="730" width="290" height="120" rx="4" fill="#eef4fb" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="684" y="757" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">J15 GY-530</text>
+<text x="684" y="781" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">Wire 地址0x29</text>
+<text x="684" y="803" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">GPIO1不接 / XSHUT开漏</text>
+<rect x="980" y="730" width="290" height="120" rx="4" fill="#eef4fb" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="994" y="757" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">J14 ASR02</text>
+<text x="994" y="781" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">独立5V支路</text>
+<text x="994" y="803" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">UART TX/RX交叉且适配</text>
+<polyline points="100,705 950,705" fill="none" stroke="#236bb2" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="195,705 195,730" fill="none" stroke="#236bb2" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="505,705 505,730" fill="none" stroke="#236bb2" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="815,705 815,730" fill="none" stroke="#236bb2" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="840,495 875,495 875,560 1290,560 1290,712 1125,712 1125,730" fill="none" stroke="#008a7c" stroke-width="2" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<text x="60" y="700" font-size="12" fill="#236bb2" font-weight="400" text-anchor="start">共享 I²C（所有主控侧上拉仅接3.3V）</text>
+<rect x="50" y="910" width="590" height="170" rx="4" fill="#fff5dc" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="64" y="937" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">两路普通单颗指示 LED</text>
+<text x="64" y="961" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">GPIO13 → R_LED1 1kΩ → J11.1 → LED1 阳极；阴极 → J11.2 / GND</text>
+<text x="64" y="983" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">GPIO16 → R_LED2 1kΩ → J12.1 → LED2 阳极；阴极 → J12.2 / GND</text>
+<text x="64" y="1005" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">测试点在电阻前；两路独立，本版不用于灯带或照明</text>
+<rect x="690" y="910" width="580" height="170" rx="4" fill="#e9f2e6" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="704" y="937" font-size="16" fill="#17324d" font-weight="600" text-anchor="start">J7 DHT11 / 红外 / 地参考</text>
+<text x="704" y="961" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">GPIO2 → DHT DATA，3.3V 上拉；启动绑带兼容性待实测</text>
+<text x="704" y="983" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">J8/J9 红外型号 / 电压未确认，适配和供电选择暂不装</text>
+<text x="704" y="1005" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">所有 GND 同网；功率回流不经过传感器地细颈</text>
+<text x="704" y="1027" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">无电池采样网络，不产生虚假电量读数</text>
+<text x="50" y="1135" font-size="14" fill="#b86c16" font-weight="400" text-anchor="start">未画出全部复位、晶振、去耦、未用脚、接口保护与连接器物理脚号。逻辑网见 layout/logical_nets.csv。</text>
+<text x="50" y="1162" font-size="14" fill="#b86c16" font-weight="400" text-anchor="start">此图用于连接评审；正式 EDA 原理图、ERC、PCB 铜线与 DRC 均尚未完成。</text>
+</svg>

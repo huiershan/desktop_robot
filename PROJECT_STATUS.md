@@ -1,5 +1,7 @@
 # 项目交接与工作区检查记录
 
+主体为P0历史记录；2026-10-24后续硬件推进见第7节，当前交付索引见[项目README](README.md)。
+
 - 检查日期：2026-10-24（Asia/Shanghai）
 - 本次范围：熟悉既有设计，完成 P0，记录 P1–P4 的执行前提。
 - 项目阶段：硬件与软件架构概念设计；尚未进入实物验证或生产交付。
@@ -122,3 +124,12 @@ P3 的 GPIO 配置集中在 `include/config/board_config.h`，参数集中在 `r
 P0 已执行 `git status`、`git remote -v`、`git log`、`git ls-files`、`git rev-list --left-right --count HEAD...origin/main`、`git diff origin/main`、`git diff --check` 和 `git ls-remote --symref origin HEAD`，基线核对通过。
 
 本次仅涉及交接与文档检查，没有固件构建、烧录、ERC/DRC 或实物上电结果。文档变更另行检查相对链接、空白错误及最终 Git 状态，并在提交后核验远端提交 ID。
+
+## 7. 2026-10-24：器件资料与硬件规划推进
+
+- 读取桌面清单的11个商品页面，保存17张关键图及来源/哈希；建立[模块尺寸表](hardware/MODULE_DIMENSIONS.md)与[来源索引](hardware/SOURCES.md)。
+- 按新资料将首版候选改为受保护5V电源、6V N20和TB6612，补充光照、ToF与语音模块；旧12V方案不直接沿用。
+- 用户确认两路是普通单颗指示LED，规划GPIO13/16各串联1kΩ。
+- 提出新增SC16IS750，保留主控直接PWM与停止；形成[硬件连接](hardware/SCHEMATIC_NOTES.md)、[针序](hardware/CONNECTOR_PINOUT.md)、[BOM](hardware/BOM.md)、[机械布局](hardware/MECHANICAL_LAYOUT.md)及[放行清单](hardware/PCB_CHECKLIST.md)。
+- 交付4张可编辑SVG及对应PNG、JSON配置和4份CSV，并检查证据、链接、GPIO/地址和区域一致性。
+- **未完成**：关键实物几何/电源资格、正式EDA原理图与铜线、ERC/DRC、生产输出和固件工程。P1是部分闭环、P2是可审核概念规划，不标记为可生产设计。

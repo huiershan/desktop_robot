@@ -4,9 +4,9 @@
 
 ## 文档
 - [软件框架与系统分层设计](SOFTWARE_ARCHITECTURE.md)
+- [GPIO 与总线规划（尚未实测）](PIN_MAPPING.md)
 
 ## 后续计划文件
-- PIN_MAPPING.md：确认后的 GPIO 分配表
 - PROTOCOLS.md：模块接口、I²C 地址和调试协议
 - STATE_MACHINE.md：行为状态机与转换条件
 - BUILD_AND_FLASH.md：开发环境、编译、烧录与日志方法
@@ -22,3 +22,5 @@
 - 不要将密码、访问令牌或其他凭据提交到仓库。
 
 确定开发框架后，请补充 ESP8266 具体开发板、SDK/Arduino Core 版本、编译器版本、依赖清单、构建命令、烧录方式及串口配置。
+
+2026-10-24 已建立 GPIO 候选表：两路普通 LED 分配 GPIO13/16；电机 PWM、STBY 直接由主控控制，拟新增 SC16IS750 接方向 GPIO 与语音 UART。模块与电源未全部核实，相关 HAL/驱动仍未实现；没有将规划当作可编译固件。

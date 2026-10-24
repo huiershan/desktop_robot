@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="820" viewBox="0 0 1250 820">
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","Segoe UI",sans-serif}</style>
+<rect width="1250" height="820" fill="#f5f8fc"/>
+<text x="40" y="48" font-size="26" fill="#17324d" font-weight="700" text-anchor="start">电源与信号布线路径走廊</text>
+<text x="40" y="77" font-size="14" fill="#52687b" font-weight="400" text-anchor="start">concept-0.2 · mm · 顶视：前方 ↑ / USB 朝后 · 矩形是预留区域，不是封装</text>
+<rect x="40" y="96" width="1170" height="36" rx="6" fill="#fff0d9" stroke="#e4c394" stroke-width="1.5"/>
+<text x="55" y="120" font-size="15" fill="#b86c16" font-weight="600" text-anchor="start">概念规划 / NOT FOR FABRICATION — 封装、孔位与电源资格尚未闭环</text>
+<rect x="90" y="205" width="660" height="480" rx="0" fill="#fff" stroke="#17324d" stroke-width="1.5"/>
+<polyline points="150,205 150,685" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="210,205 210,685" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="270,205 270,685" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="330,205 330,685" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="390,205 390,685" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="450,205 450,685" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="510,205 510,685" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="570,205 570,685" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="630,205 630,685" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="690,205 690,685" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="90,265 750,265" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="90,325 750,325" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="90,385 750,385" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="90,445 750,445" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="90,505 750,505" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="90,565 750,565" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="90,625 750,625" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
+<text x="90" y="183" font-size="12" fill="#52687b" font-weight="400" text-anchor="start">X=0, Y=0</text>
+<text x="420" y="183" font-size="17" fill="#17324d" font-weight="600" text-anchor="middle">主 PCB 候选 110 × 80</text>
+<circle cx="114" cy="229" r="9.600000000000001" fill="#f5f8fc" stroke="#17324d" stroke-width="1.5"/>
+<text x="132" y="235" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">H1</text>
+<circle cx="726" cy="229" r="9.600000000000001" fill="#f5f8fc" stroke="#17324d" stroke-width="1.5"/>
+<text x="744" y="235" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">H2</text>
+<circle cx="114" cy="661" r="9.600000000000001" fill="#f5f8fc" stroke="#17324d" stroke-width="1.5"/>
+<text x="132" y="667" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">H3</text>
+<circle cx="726" cy="661" r="9.600000000000001" fill="#f5f8fc" stroke="#17324d" stroke-width="1.5"/>
+<text x="744" y="667" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">H4</text>
+<rect x="162" y="205" width="204" height="396" rx="4" fill="#dbeafe" stroke="#b8c8d8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="402" y="253" width="138" height="108" rx="4" fill="#d7f0e5" stroke="#b8c8d8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="411" y="275" font-size="16" fill="#17324d" font-weight="700" text-anchor="start">U2</text>
+<text x="411" y="299" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">UART / GPIO</text>
+<text x="411" y="321" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">含晶振与去耦</text>
+<rect x="402" y="385" width="144" height="120" rx="4" fill="#e4f3db" stroke="#b8c8d8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="411" y="407" font-size="16" fill="#17324d" font-weight="700" text-anchor="start">U3</text>
+<text x="411" y="431" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">GY-521</text>
+<text x="411" y="452" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">实际外形21×16</text>
+<text x="411" y="473" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">孔位待测</text>
+<rect x="402" y="529" width="144" height="120" rx="4" fill="#fff0cd" stroke="#b8c8d8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="411" y="551" font-size="16" fill="#17324d" font-weight="700" text-anchor="start">PWR</text>
+<text x="411" y="575" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">5V 输入保护</text>
+<text x="411" y="598" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">保险 / 回流</text>
+<rect x="570" y="499" width="144" height="150" rx="4" fill="#fce0db" stroke="#b8c8d8" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="579" y="521" font-size="16" fill="#17324d" font-weight="700" text-anchor="start">U4</text>
+<text x="579" y="547" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">TB6612 模块</text>
+<text x="579" y="571" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">排针 / 温升待测</text>
+<rect x="144" y="205" width="240" height="120" rx="4" fill="#fff4df" stroke="#b86c16" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="154" y="237" font-size="12" fill="#b86c16" font-weight="400" text-anchor="start">天线与金属避让</text>
+<text x="154" y="260" font-size="12" fill="#b86c16" font-weight="400" text-anchor="start">规划区 40 × 20</text>
+<text x="154" y="283" font-size="12" fill="#b86c16" font-weight="400" text-anchor="start">最终按实际天线修订</text>
+<text x="172" y="368" font-size="17" fill="#17324d" font-weight="700" text-anchor="start">U1 NodeMCU</text>
+<text x="172" y="401" font-size="13" fill="#17324d" font-weight="400" text-anchor="start">成品开发板 / 可拆卸</text>
+<text x="172" y="429" font-size="13" fill="#17324d" font-weight="400" text-anchor="start">区域 34 × 66</text>
+<text x="172" y="457" font-size="13" fill="#17324d" font-weight="400" text-anchor="start">真实尺寸与插座待测</text>
+<rect x="144" y="601" width="240" height="84" rx="4" fill="#edf2f7" stroke="#52687b" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="153" y="631" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">USB 插拔走廊 → 后方开口</text>
+<text x="153" y="654" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">主控 USB 位置待量</text>
+<rect x="445" y="662" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="458" y="658" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J1</text>
+<rect x="565" y="662" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="578" y="658" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J2</text>
+<rect x="661" y="662" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="674" y="658" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J3</text>
+<rect x="415" y="218" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="428" y="214" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J5</text>
+<rect x="499" y="218" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="512" y="214" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J6</text>
+<rect x="103" y="392" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="116" y="388" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J7</text>
+<rect x="727" y="260" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="724" y="256" font-size="10" fill="#17324d" font-weight="400" text-anchor="end">J8</text>
+<rect x="727" y="452" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="724" y="448" font-size="10" fill="#17324d" font-weight="400" text-anchor="end">J9</text>
+<rect x="103" y="476" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="116" y="472" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J11</text>
+<rect x="103" y="560" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="116" y="556" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J12</text>
+<rect x="583" y="218" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="596" y="214" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J13</text>
+<rect x="727" y="362" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="724" y="358" font-size="10" fill="#17324d" font-weight="400" text-anchor="end">J14</text>
+<rect x="673" y="218" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
+<text x="686" y="214" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J15</text>
+<text x="420" y="719" font-size="13" fill="#52687b" font-weight="400" text-anchor="middle">参考点与区域坐标：layout/plan.json / connector_positions.csv</text>
+<polyline points="450,667 450,619 510,577 570,577 642,577" fill="none" stroke="#c6423c" stroke-width="4" stroke-linejoin="round"/>
+<polyline points="510,577 390,577 366,565" fill="none" stroke="#c6423c" stroke-width="4" stroke-linejoin="round"/>
+<polyline points="510,577 552,577 552,367 732,367" fill="none" stroke="#c6423c" stroke-width="4" stroke-linejoin="round"/>
+<polyline points="366,397 390,397 546,397 546,241 678,241" fill="none" stroke="#236bb2" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="420,241 420,223" fill="none" stroke="#236bb2" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="504,241 504,223" fill="none" stroke="#236bb2" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="588,241 588,223" fill="none" stroke="#236bb2" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="678,241 678,223" fill="none" stroke="#236bb2" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="468,397 468,361" fill="none" stroke="#236bb2" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="468,397 468,433" fill="none" stroke="#236bb2" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="366,523 558,481 642,499" fill="none" stroke="#8054b3" stroke-width="3" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<polyline points="540,325 708,325 732,367" fill="none" stroke="#008a7c" stroke-width="3" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<text x="800" y="195" font-size="20" fill="#17324d" font-weight="700" text-anchor="start">路径定义</text>
+<polyline points="805,245 850,245" fill="none" stroke="#c6423c" stroke-width="4" stroke-linejoin="round"/>
+<text x="865" y="250" font-size="15" fill="#17324d" font-weight="600" text-anchor="start">红：5V 功率支路</text>
+<text x="805" y="280" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">入口保护后分支，VM 回流就近回入口</text>
+<polyline points="805,345 850,345" fill="none" stroke="#236bb2" stroke-width="4" stroke-linejoin="round"/>
+<text x="865" y="350" font-size="15" fill="#17324d" font-weight="600" text-anchor="start">蓝：共享 I²C</text>
+<text x="805" y="380" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">主控侧3.3V上拉，短支线与连续地参考</text>
+<polyline points="805,445 850,445" fill="none" stroke="#8054b3" stroke-width="4" stroke-linejoin="round"/>
+<text x="865" y="450" font-size="15" fill="#17324d" font-weight="600" text-anchor="start">紫：PWM / STBY</text>
+<text x="805" y="480" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">主控直接到驱动，停止不经过 U2</text>
+<polyline points="805,545 850,545" fill="none" stroke="#008a7c" stroke-width="4" stroke-linejoin="round"/>
+<text x="865" y="550" font-size="15" fill="#17324d" font-weight="600" text-anchor="start">绿：语音 UART</text>
+<text x="805" y="580" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">U2 到 ASR；电平适配后才接通</text>
+<text x="80" y="759" font-size="14" fill="#b86c16" font-weight="400" text-anchor="start">示意路径可能交叉；没有定义铜层、焊盘、过孔或实际铜宽。GND 尽量连续，避免信号跨地缝。</text>
+<text x="80" y="783" font-size="14" fill="#b86c16" font-weight="400" text-anchor="start">电机启动/堵转与回灌数据未闭环，电源额定值及走线计算尚未放行。</text>
+</svg>
