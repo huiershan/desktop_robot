@@ -19,19 +19,25 @@
       {"id": "U4", "label": "TB6612 驱动板", "box": [80, 49, 24, 25], "type": "motor", "note": "约22.5×20；排针几何待测"}
     ],
     "connectors": [
-      {"id":"J1","name":"5V IN","xy":[60,77]},
-      {"id":"J2","name":"MOTOR L","xy":[80,77]},
-      {"id":"J3","name":"MOTOR R","xy":[96,77]},
-      {"id":"J5","name":"OLED","xy":[55,3]},
-      {"id":"J6","name":"IMU BUS","xy":[69,3]},
-      {"id":"J7","name":"DHT11","xy":[3,32]},
-      {"id":"J8","name":"CLIFF L","xy":[107,10]},
-      {"id":"J9","name":"CLIFF R","xy":[107,42]},
-      {"id":"J11","name":"LED1","xy":[3,46]},
-      {"id":"J12","name":"LED2","xy":[3,60]},
-      {"id":"J13","name":"BH1750","xy":[83,3]},
-      {"id":"J14","name":"ASR UART","xy":[107,27]},
-      {"id":"J15","name":"TOF","xy":[98,3]}
+      {"id":"J1","name":"5V IN","short_label":"5V电源","purpose_zh":"受保护的5V电源输入","xy":[60,77]},
+      {"id":"J2","name":"MOTOR L","short_label":"左电机","purpose_zh":"左电机输出（AO1 / AO2）","xy":[80,77]},
+      {"id":"J3","name":"MOTOR R","short_label":"右电机","purpose_zh":"右电机输出（BO1 / BO2）","xy":[96,77]},
+      {"id":"J5","name":"OLED","short_label":"显示屏","purpose_zh":"OLED显示屏（I²C）","xy":[55,3]},
+      {"id":"J6","name":"IMU BUS","short_label":"六轴IMU","purpose_zh":"GY-521 / MPU6050六轴传感器","xy":[69,3]},
+      {"id":"J7","name":"DHT11","short_label":"温湿度","purpose_zh":"DHT11温湿度传感器","xy":[3,32]},
+      {"id":"J8","name":"CLIFF L","short_label":"左下视红外","purpose_zh":"左下视红外候选接口（待确认）","xy":[107,10]},
+      {"id":"J9","name":"CLIFF R","short_label":"右下视红外","purpose_zh":"右下视红外候选接口（待确认）","xy":[107,42]},
+      {"id":"J11","name":"LED1","short_label":"LED1","purpose_zh":"指示LED1：GPIO13，经1kΩ限流","xy":[3,46]},
+      {"id":"J12","name":"LED2","short_label":"LED2","purpose_zh":"指示LED2：GPIO16，经1kΩ限流","xy":[3,60]},
+      {"id":"J13","name":"BH1750","short_label":"光照","purpose_zh":"BH1750光照度传感器（I²C）","xy":[83,3]},
+      {"id":"J14","name":"ASR UART","short_label":"语音模块","purpose_zh":"ASR02语音板：电源与UART串口","xy":[107,27]},
+      {"id":"J15","name":"TOF","short_label":"激光测距","purpose_zh":"GY-530激光测距（I²C / XSHUT）","xy":[98,3]}
+    ],
+    "unplaced_connectors": [
+      {"id":"J4A/J4B","purpose_zh":"NodeMCU两列插座（待定位）"},
+      {"id":"J10","purpose_zh":"3.3V调试串口（待定位）"},
+      {"id":"J16","purpose_zh":"主电源开关引出（待定位）"},
+      {"id":"J17","purpose_zh":"电机允许开关引出（待定位）"}
     ]
   },
   "chassis": {

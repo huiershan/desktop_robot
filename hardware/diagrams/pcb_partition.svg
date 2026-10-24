@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="820" viewBox="0 0 1250 820">
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1120" viewBox="0 0 1400 1120">
 <style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","Segoe UI",sans-serif}</style>
-<rect width="1250" height="820" fill="#f5f8fc"/>
+<rect width="1400" height="1120" fill="#f5f8fc"/>
 <text x="40" y="48" font-size="26" fill="#17324d" font-weight="700" text-anchor="start">主 PCB 功能分区与接口候选位置</text>
-<text x="40" y="77" font-size="14" fill="#52687b" font-weight="400" text-anchor="start">concept-0.2 · mm · 顶视：前方 ↑ / USB 朝后 · 矩形是预留区域，不是封装</text>
-<rect x="40" y="96" width="1170" height="36" rx="6" fill="#fff0d9" stroke="#e4c394" stroke-width="1.5"/>
+<text x="40" y="77" font-size="14" fill="#52687b" font-weight="400" text-anchor="start">concept-0.2 · mm · 顶视：前方 ↑ / USB 朝后 · J 表示连接器编号，功能见标注与下方速查</text>
+<rect x="40" y="96" width="1320" height="36" rx="6" fill="#fff0d9" stroke="#e4c394" stroke-width="1.5"/>
 <text x="55" y="120" font-size="15" fill="#b86c16" font-weight="600" text-anchor="start">概念规划 / NOT FOR FABRICATION — 封装、孔位与电源资格尚未闭环</text>
 <rect x="90" y="205" width="660" height="480" rx="0" fill="#fff" stroke="#17324d" stroke-width="1.5"/>
 <polyline points="150,205 150,685" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
@@ -24,7 +24,7 @@
 <polyline points="90,565 750,565" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
 <polyline points="90,625 750,625" fill="none" stroke="#e8eef5" stroke-width="1" stroke-linejoin="round"/>
 <text x="90" y="183" font-size="12" fill="#52687b" font-weight="400" text-anchor="start">X=0, Y=0</text>
-<text x="420" y="183" font-size="17" fill="#17324d" font-weight="600" text-anchor="middle">主 PCB 候选 110 × 80</text>
+<text x="420" y="155" font-size="17" fill="#17324d" font-weight="600" text-anchor="middle">主 PCB 候选 110 × 80</text>
 <circle cx="114" cy="229" r="9.600000000000001" fill="#f5f8fc" stroke="#17324d" stroke-width="1.5"/>
 <text x="132" y="235" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">H1</text>
 <circle cx="726" cy="229" r="9.600000000000001" fill="#f5f8fc" stroke="#17324d" stroke-width="1.5"/>
@@ -63,44 +63,77 @@
 <text x="153" y="631" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">USB 插拔走廊 → 后方开口</text>
 <text x="153" y="654" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">主控 USB 位置待量</text>
 <rect x="445" y="662" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="458" y="658" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J1</text>
+<polyline points="450,673 450,692" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="450" y="707" font-size="12" fill="#17324d" font-weight="400" text-anchor="middle">J1 5V电源</text>
 <rect x="565" y="662" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="578" y="658" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J2</text>
+<polyline points="570,673 570,692" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="570" y="707" font-size="12" fill="#17324d" font-weight="400" text-anchor="middle">J2 左电机</text>
 <rect x="661" y="662" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="674" y="658" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J3</text>
+<polyline points="666,673 666,692" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="666" y="707" font-size="12" fill="#17324d" font-weight="400" text-anchor="middle">J3 右电机</text>
 <rect x="415" y="218" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="428" y="214" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J5</text>
+<polyline points="420,217 420,200" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="420" y="193" font-size="12" fill="#17324d" font-weight="400" text-anchor="middle">J5 显示屏</text>
 <rect x="499" y="218" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="512" y="214" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J6</text>
+<polyline points="504,217 504,200" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="504" y="193" font-size="12" fill="#17324d" font-weight="400" text-anchor="middle">J6 六轴IMU</text>
 <rect x="103" y="392" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="116" y="388" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J7</text>
+<polyline points="85,397 102,397" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="80" y="401" font-size="12" fill="#17324d" font-weight="400" text-anchor="end">J7 温湿度</text>
 <rect x="727" y="260" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="724" y="256" font-size="10" fill="#17324d" font-weight="400" text-anchor="end">J8</text>
+<polyline points="738,265 759,265" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="765" y="269" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">J8 左下视红外</text>
 <rect x="727" y="452" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="724" y="448" font-size="10" fill="#17324d" font-weight="400" text-anchor="end">J9</text>
+<polyline points="738,457 759,457" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="765" y="461" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">J9 右下视红外</text>
 <rect x="103" y="476" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="116" y="472" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J11</text>
+<polyline points="85,481 102,481" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="80" y="485" font-size="12" fill="#17324d" font-weight="400" text-anchor="end">J11 LED1</text>
 <rect x="103" y="560" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="116" y="556" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J12</text>
+<polyline points="85,565 102,565" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="80" y="569" font-size="12" fill="#17324d" font-weight="400" text-anchor="end">J12 LED2</text>
 <rect x="583" y="218" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="596" y="214" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J13</text>
+<polyline points="588,217 588,200" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="588" y="193" font-size="12" fill="#17324d" font-weight="400" text-anchor="middle">J13 光照</text>
 <rect x="727" y="362" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="724" y="358" font-size="10" fill="#17324d" font-weight="400" text-anchor="end">J14</text>
+<polyline points="738,367 759,367" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="765" y="371" font-size="12" fill="#17324d" font-weight="400" text-anchor="start">J14 语音模块</text>
 <rect x="673" y="218" width="10" height="10" rx="1" fill="#17324d" stroke="#17324d" stroke-width="1.5"/>
-<text x="686" y="214" font-size="10" fill="#17324d" font-weight="400" text-anchor="start">J15</text>
-<text x="420" y="719" font-size="13" fill="#52687b" font-weight="400" text-anchor="middle">参考点与区域坐标：layout/plan.json / connector_positions.csv</text>
-<text x="800" y="195" font-size="20" fill="#17324d" font-weight="700" text-anchor="start">布局约束</text>
-<text x="800" y="234" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">1. 成品开发板可拆卸，天线靠前缘。</text>
-<text x="800" y="266" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">2. 射频区避免铜、走线、螺丝和电池。</text>
-<text x="800" y="298" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">3. MPU 平整固定并记录机器人轴向。</text>
-<text x="800" y="330" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">4. 入口保护与驱动靠近后方功率出口。</text>
-<text x="800" y="362" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">5. DHT、光照、OLED、ToF 由线束外置。</text>
-<text x="800" y="394" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">6. ASR 整板位于上层，串口经 U2。</text>
-<rect x="790" y="450" width="410" height="192" rx="4" fill="white" stroke="#b8c8d8" stroke-width="1.5"/>
-<text x="810" y="478" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">两路普通单颗 LED</text>
-<text x="810" y="508" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">GPIO13 → 1kΩ → J11 → LED1</text>
-<text x="810" y="538" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">GPIO16 → 1kΩ → J12 → LED2</text>
-<text x="810" y="568" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">两路独立；阴极均接 GND</text>
-<text x="810" y="598" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">未分配至启动绑带或电机停止信号</text>
+<polyline points="678,217 678,200" fill="none" stroke="#52687b" stroke-width="1" stroke-linejoin="round"/>
+<text x="678" y="193" font-size="12" fill="#17324d" font-weight="400" text-anchor="middle">J15 激光测距</text>
+<text x="420" y="740" font-size="13" fill="#52687b" font-weight="400" text-anchor="middle">参考点与区域坐标：layout/plan.json / connector_positions.csv</text>
+<text x="950" y="195" font-size="20" fill="#17324d" font-weight="700" text-anchor="start">布局约束</text>
+<text x="950" y="234" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">1. 成品开发板可拆卸，天线靠前缘。</text>
+<text x="950" y="266" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">2. 射频区避免铜、走线、螺丝和电池。</text>
+<text x="950" y="298" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">3. MPU 平整固定并记录机器人轴向。</text>
+<text x="950" y="330" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">4. 入口保护与驱动靠近后方功率出口。</text>
+<text x="950" y="362" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">5. DHT、光照、OLED、ToF 由线束外置。</text>
+<text x="950" y="394" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">6. ASR 整板位于上层，串口经 U2。</text>
+<rect x="940" y="450" width="410" height="192" rx="4" fill="white" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="960" y="478" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">两路普通单颗 LED</text>
+<text x="960" y="508" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">GPIO13 → 1kΩ → J11 → LED1</text>
+<text x="960" y="538" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">GPIO16 → 1kΩ → J12 → LED2</text>
+<text x="960" y="568" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">两路独立；阴极均接 GND</text>
+<text x="960" y="598" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">未分配至启动绑带或电机停止信号</text>
 <text x="80" y="766" font-size="14" fill="#b86c16" font-weight="400" text-anchor="start">孔与连接器仍为候选：必须使用真实封装复核螺丝头、锁扣、插头与 Z 向空间。</text>
+<rect x="70" y="815" width="1260" height="245" rx="4" fill="white" stroke="#b8c8d8" stroke-width="1.5"/>
+<text x="90" y="845" font-size="18" fill="#17324d" font-weight="600" text-anchor="start">J 编号功能速查（不是 GPIO 编号；针序详见 CONNECTOR_PINOUT.md）</text>
+<text x="90" y="880" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J1  受保护的5V电源输入</text>
+<text x="90" y="909" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J2  左电机输出（AO1 / AO2）</text>
+<text x="90" y="938" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J3  右电机输出（BO1 / BO2）</text>
+<text x="90" y="967" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J4A/J4B  NodeMCU两列插座（待定位）</text>
+<text x="90" y="996" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J5  OLED显示屏（I²C）</text>
+<text x="90" y="1025" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J6  GY-521 / MPU6050六轴传感器</text>
+<text x="505" y="880" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J7  DHT11温湿度传感器</text>
+<text x="505" y="909" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J8  左下视红外候选接口（待确认）</text>
+<text x="505" y="938" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J9  右下视红外候选接口（待确认）</text>
+<text x="505" y="967" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J10  3.3V调试串口（待定位）</text>
+<text x="505" y="996" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J11  指示LED1：GPIO13，经1kΩ限流</text>
+<text x="505" y="1025" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J12  指示LED2：GPIO16，经1kΩ限流</text>
+<text x="920" y="880" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J13  BH1750光照度传感器（I²C）</text>
+<text x="920" y="909" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J14  ASR02语音板：电源与UART串口</text>
+<text x="920" y="938" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J15  GY-530激光测距（I²C / XSHUT）</text>
+<text x="920" y="967" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J16  主电源开关引出（待定位）</text>
+<text x="920" y="996" font-size="14" fill="#17324d" font-weight="400" text-anchor="start">J17  电机允许开关引出（待定位）</text>
+<text x="70" y="1090" font-size="13" fill="#52687b" font-weight="400" text-anchor="start">J4A/J4B、J10、J16、J17 尚未确定板上坐标，仅在速查表说明用途；其他标记仍是候选参考点。</text>
 </svg>

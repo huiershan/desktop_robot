@@ -52,14 +52,14 @@ class SVG:
 
 
 def pcb_base(title):
-    s=SVG(1250,820,title,'concept-0.2 · mm · 顶视：前方 ↑ / USB 朝后 · 矩形是预留区域，不是封装')
+    s=SVG(1400,1120,title,'concept-0.2 · mm · 顶视：前方 ↑ / USB 朝后 · J 表示连接器编号，功能见标注与下方速查')
     ox,oy,k=90,205,6
     def xy(x,y): return ox+x*k,oy+y*k
     s.rect(ox,oy,110*k,80*k,'#fff',INK,radius=0)
     for x in range(10,110,10): s.path([xy(x,0),xy(x,80)],'#e8eef5',1)
     for y in range(10,80,10): s.path([xy(0,y),xy(110,y)],'#e8eef5',1)
     s.text(ox,oy-22,'X=0, Y=0',size=12,color=MUTED)
-    s.text(ox+330,oy-22,'主 PCB 候选 110 × 80',size=17,weight=600,anchor='middle')
+    s.text(ox+330,oy-50,'主 PCB 候选 110 × 80',size=17,weight=600,anchor='middle')
     for i,(x,y,d) in enumerate(PLAN['pcb']['holes'],1):
         s.circle(*xy(x,y),d*k/2,fill='#f5f8fc')
         s.text(*xy(x+3,y+1),f'H{i}',size=10)
@@ -86,19 +86,42 @@ def pcb_base(title):
     for connector in PLAN['pcb']['connectors']:
         x,y=connector['xy'];px,py=xy(x,y)
         s.rect(px-5,py-5,10,10,'#17324d','#17324d',radius=1)
-        # Names and coordinates are in the table; keep markers compact.
-        s.text(px+8 if x<105 else px-8,py-9,connector['id'],size=10,anchor='start' if x<105 else 'end')
-    s.text(ox+330,oy+80*k+34,'参考点与区域坐标：layout/plan.json / connector_positions.csv',size=13,color=MUTED,anchor='middle')
+        label=f'{connector["id"]} {connector["short_label"]}'
+        if x<10:
+            s.path([(ox-5,py),(px-6,py)],MUTED,1)
+            s.text(ox-10,py+4,label,size=12,anchor='end')
+        elif x>100:
+            s.path([(px+6,py),(ox+110*k+9,py)],MUTED,1)
+            s.text(ox+110*k+15,py+4,label,size=12)
+        elif y<10:
+            s.path([(px,py-6),(px,oy-5)],MUTED,1)
+            s.text(px,oy-12,label,size=12,anchor='middle')
+        else:
+            s.path([(px,py+6),(px,oy+80*k+7)],MUTED,1)
+            s.text(px,oy+80*k+22,label,size=12,anchor='middle')
+    s.text(ox+330,oy+80*k+55,'参考点与区域坐标：layout/plan.json / connector_positions.csv',size=13,color=MUTED,anchor='middle')
     return s,xy
+
+
+def connector_legend(s):
+    s.rect(70,815,1260,245,'white')
+    s.text(90,845,'J 编号功能速查（不是 GPIO 编号；针序详见 CONNECTOR_PINOUT.md）',size=18,weight=600)
+    connectors=PLAN['pcb']['connectors']+PLAN['pcb'].get('unplaced_connectors',[])
+    connectors=sorted(connectors,key=lambda c:int(''.join(ch for ch in c['id'].split('/')[0] if ch.isdigit())))
+    for index,c in enumerate(connectors):
+        column,row=divmod(index,6)
+        s.text(90+column*415,880+row*29,f'{c["id"]}  {c["purpose_zh"]}',size=14)
+    s.text(70,1090,'J4A/J4B、J10、J16、J17 尚未确定板上坐标，仅在速查表说明用途；其他标记仍是候选参考点。',size=13,color=MUTED)
 
 
 def draw_pcb():
     s,xy=pcb_base('主 PCB 功能分区与接口候选位置')
-    s.lines(800,195,['布局约束'],size=20,weight=700)
-    s.lines(800,234,['1. 成品开发板可拆卸，天线靠前缘。','2. 射频区避免铜、走线、螺丝和电池。','3. MPU 平整固定并记录机器人轴向。','4. 入口保护与驱动靠近后方功率出口。','5. DHT、光照、OLED、ToF 由线束外置。','6. ASR 整板位于上层，串口经 U2。'],size=14,step=32)
-    s.rect(790,450,410,192,'white')
-    s.lines(810,478,['两路普通单颗 LED','GPIO13 → 1kΩ → J11 → LED1','GPIO16 → 1kΩ → J12 → LED2','两路独立；阴极均接 GND','未分配至启动绑带或电机停止信号'],size=14,step=30)
+    s.lines(950,195,['布局约束'],size=20,weight=700)
+    s.lines(950,234,['1. 成品开发板可拆卸，天线靠前缘。','2. 射频区避免铜、走线、螺丝和电池。','3. MPU 平整固定并记录机器人轴向。','4. 入口保护与驱动靠近后方功率出口。','5. DHT、光照、OLED、ToF 由线束外置。','6. ASR 整板位于上层，串口经 U2。'],size=14,step=32)
+    s.rect(940,450,410,192,'white')
+    s.lines(960,478,['两路普通单颗 LED','GPIO13 → 1kΩ → J11 → LED1','GPIO16 → 1kΩ → J12 → LED2','两路独立；阴极均接 GND','未分配至启动绑带或电机停止信号'],size=14,step=30)
     s.lines(80,766,['孔与连接器仍为候选：必须使用真实封装复核螺丝头、锁扣、插头与 Z 向空间。'],size=14,color=ORANGE)
+    connector_legend(s)
     s.save('pcb_partition.svg')
 
 
@@ -111,12 +134,13 @@ def draw_routing():
         s.path([xy(*v) for v in p],BLUE,3)
     s.path([xy(46,53),xy(78,46),xy(92,49)],'#8054b3',3,dash=True)
     s.path([xy(75,20),xy(103,20),xy(107,27)],'#008a7c',3,dash=True)
-    s.lines(800,195,['路径定义'],size=20,weight=700)
+    s.lines(950,195,['路径定义'],size=20,weight=700)
     for y,color,title,body in [(245,RED,'红：5V 功率支路','入口保护后分支，VM 回流就近回入口'),(345,BLUE,'蓝：共享 I²C','主控侧3.3V上拉，短支线与连续地参考'),(445,'#8054b3','紫：PWM / STBY','主控直接到驱动，停止不经过 U2'),(545,'#008a7c','绿：语音 UART','U2 到 ASR；电平适配后才接通')]:
-        s.path([(805,y),(850,y)],color,4)
-        s.text(865,y+5,title,size=15,weight=600)
-        s.text(805,y+35,body,size=13,color=MUTED)
+        s.path([(955,y),(1000,y)],color,4)
+        s.text(1015,y+5,title,size=15,weight=600)
+        s.text(955,y+35,body,size=13,color=MUTED)
     s.lines(80,759,['示意路径可能交叉；没有定义铜层、焊盘、过孔或实际铜宽。GND 尽量连续，避免信号跨地缝。','电机启动/堵转与回灌数据未闭环，电源额定值及走线计算尚未放行。'],size=14,step=24,color=ORANGE)
+    connector_legend(s)
     s.save('routing_plan.svg')
 
 
@@ -211,7 +235,7 @@ def export_tables():
             writer=csv.writer(stream);writer.writerow(header);writer.writerows(rows)
     write_csv('logical_nets.csv',['net','endpoint','pin_number_status'],[(n['net'],p,'logical_name_only') for n in PLAN['nets'] for p in n['nodes']])
     write_csv('placement_zones.csv',['id','name','x_mm','y_mm','width_mm','height_mm','status'],[(z['id'],z['label'],*z['box'],'PLANNING_RESERVATION_NOT_FOOTPRINT') for z in PLAN['pcb']['zones']])
-    write_csv('connector_positions.csv',['id','name','x_mm','y_mm','status'],[(c['id'],c['name'],*c['xy'],'REFERENCE_POINT_NOT_PAD_CENTER') for c in PLAN['pcb']['connectors']])
+    write_csv('connector_positions.csv',['id','name','purpose_zh','x_mm','y_mm','status'],[(c['id'],c['name'],c['purpose_zh'],*c['xy'],'REFERENCE_POINT_NOT_PAD_CENTER') for c in PLAN['pcb']['connectors']])
     write_csv('gpio_plan.csv',['gpio','board_label_pending','signal','purpose'],[(g['gpio'],g['board_label'],g['signal'],g['purpose']) for g in PLAN['gpio']])
 
 
